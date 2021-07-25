@@ -1,0 +1,17 @@
+#!/bin/python
+
+from re import search
+from sys import argv
+
+
+def grep(text, file):
+    for line in file:
+        if search(text, line):
+            print(line.strip())
+
+
+if __name__ == "__main__":
+    try:
+        grep(argv[1], open(argv[2]))
+    except FileNotFoundError:
+        print("Ese no es un archivo valido!")

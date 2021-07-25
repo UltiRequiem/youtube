@@ -1,0 +1,22 @@
+#!/bin/python3.10
+
+from sys import argv
+
+def calc(operation:str,num_one:int,num_two:int):
+    match operation:
+        case "sum":
+            return num_one + num_two
+        case 'res':
+            return num_one - num_two
+        case 'mul':
+            return num_one* num_two
+        case 'div':
+            return num_one / num_two
+        case _:
+            return "Esa no es operación valida!"
+
+if __name__ == "__main__":
+    try:
+        print(calc(argv[1], int(argv[2]), int(argv[3])))
+    except IndexError:
+        print("Te faltan argumentos!")
