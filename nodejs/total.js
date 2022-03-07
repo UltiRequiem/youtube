@@ -10,4 +10,4 @@ async function printFiles() {
   console.log(`En este directorio hay ${totalFiles} archivos.`);
 }
 
-printFiles()
+printFiles();
